@@ -2,6 +2,38 @@ import { RevealOnScroll } from "../RevealOnScroll";
 import {Link} from "react-scroll";
 import { FaDownload } from "react-icons/fa";
 
+export const ResumeLink = () => {
+    const handleClick = (e) => {
+      e.preventDefault();
+      
+      // Open in new tab
+      window.open('/Evan_Fraustro_Resume.pdf', '_blank', 'noopener,noreferrer');
+      
+      // Create a temporary anchor to trigger download
+      const downloadLink = document.createElement('a');
+      downloadLink.href = '/Evan_Fraustro_Resume.pdf';
+      downloadLink.download = 'Evan_Fraustro_Resume.pdf';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    };
+  
+    return (
+      <a 
+        href="/Evan_Fraustro_Resume.pdf"
+        onClick={handleClick}
+        aria-label="View and Download Resume"
+        className="border border-red-500/50 text-red-500 py-3 px-6 rounded font-medium transition-all duration-300
+                  hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,46,0.2)] hover:bg-red-500/10 hover:text-white flex items-center"
+      >
+        Resume
+        <FaDownload className="ml-2" />
+      </a>
+    );
+  };
+  
+
+
 
 export const Home = () => {
     return (
@@ -37,17 +69,7 @@ export const Home = () => {
                         >
                             View Projects
                         </Link>
-                        <a 
-                        href="/Evan_Fraustro_Resume.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Download Resume"
-                        className="border border-red-500/50 text-red-500 py-3 px-6 rounded font-medium transition-all duration-300
-                                    hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,46,0.2)] hover:bg-red-500/10 hover:text-white flex items-center "
-                        >
-                            Resume
-                            <FaDownload className="ml-2"/>
-                        </a>
+                        <ResumeLink/>
                     </div>
                 </div>
             </RevealOnScroll>
