@@ -12,6 +12,9 @@ export const Projects = () => {
                     My Projects
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                    {/* Tonic Audio Project */}
+                    
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-red-500/10 hover:shadow-{0_2px_8px_rgba(59,130,246,0.1)] transition-all">
                         <h3 className="flex justify-between items-center text-xl font-bold mb-2">
                             Tonic Audio
@@ -31,9 +34,11 @@ export const Projects = () => {
                         )}
                         </div>
                         <div className="flex flex-between items-center">
-                            <a href="#" className="text-red-400 hover:text-red-300 transition-colors">View Project → </a>
+                            <a href="#" className="text-red-400 hover:text-red-300 transition-colors">View Project → </a>  
                         </div>
                     </div>
+
+                    {/* Alien Invasion Project*/}
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-red-500/10 hover:shadow-{0_2px_8px_rgba(59,130,246,0.1)] transition-all flex flex-col justify-between h-full">
                         <h3 className="flex justify-between items-center text-xl font-bold mb-2">
                             Alien Invasion
@@ -53,9 +58,17 @@ export const Projects = () => {
                         )}
                         </div>
                         <div className="flex flex-between items-center">
-                            <a href="https://github.com/efrosty24/alien-invasion.git" className="text-red-400 hover:text-red-300 transition-colors">View Project → </a>
+                            <a 
+                            href="https://github.com/efrosty24/alien-invasion.git" 
+                            target="_blank"
+                            className="text-red-400 hover:text-red-300 transition-colors"
+                            >View Project → </a>
                         </div>
                     </div>
+
+                    
+                        {/* Simple Calculator Project*/}
+
                     <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-red-500/10 hover:shadow-{0_2px_8px_rgba(59,130,246,0.1)] transition-all flex flex-col justify-between h-full">
                         <h3 className="flex justify-between items-center text-xl font-bold mb-2">
                             Simple Calculator
@@ -75,7 +88,12 @@ export const Projects = () => {
                         )}
                         </div>
                         <div className="flex flex-between items-center">
-                            <a href="https://efrosty24.github.io/Simple-Calc/" className="text-red-400 hover:text-red-300 transition-colors">View Project → </a>
+                            <a 
+                            href="https://efrosty24.github.io/Simple-Calc/" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-red-400 hover:text-red-300 transition-colors"
+                            >View Project → </a>
                         </div>
                     </div>
                 </div>

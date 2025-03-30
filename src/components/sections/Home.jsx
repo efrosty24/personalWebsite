@@ -1,4 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import {Link} from "react-scroll";
+import { FaDownload } from "react-icons/fa";
+
 
 export const Home = () => {
     return (
@@ -23,17 +26,27 @@ export const Home = () => {
                     <br/>Currently I am working on a few projects and looking for internships to expand my knowledge and experience.
                     </p>
                     <div className="flex justify-center space-x-4">
-                        <a href="#projects"
+                        <Link 
+                        to="projects"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        offset={-50}
                         className="bg-red-500 text-white py-3 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5
                                         hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]"
                         >
                             View Projects
-                        </a>
-                        <a href="#contact"
+                        </Link>
+                        <a 
+                        href="/Evan_Fraustro_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Download Resume"
                         className="border border-red-500/50 text-red-500 py-3 px-6 rounded font-medium transition-all duration-300
-                                    hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,46,0.2)] hover:bg-red-500/10 hover:text-white"
+                                    hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59,130,46,0.2)] hover:bg-red-500/10 hover:text-white flex items-center "
                         >
                             Resume
+                            <FaDownload className="ml-2"/>
                         </a>
                     </div>
                 </div>
