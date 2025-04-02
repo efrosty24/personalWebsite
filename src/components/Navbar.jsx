@@ -8,7 +8,7 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
     }, [menuOpen]);
 
     return (
-        <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+        <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10,.6)] backdrop-blur-lg border-b border-white/10 shadow-lg">
             <div className="max-w-5xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
                     <Link 
@@ -17,8 +17,8 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
                     smooth={true}
                     duration={500}
                     offset={0}
-                    className="font-mono text-xl font-bold text-white hover:cursor-pointer">    
-                        <img src="EF.svg" alt="logo" width={35} height={35} />
+                    className="font-mono text-xl tracking-widest text-white hover:cursor-pointer uppercase ">    
+                        Tonic Audio
                     </Link>
 
                     <div 
@@ -35,8 +35,8 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
                         smooth={true}
                         duration={500}
                         offset={-50} 
-                        activeClass="text-red-500"
-                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
+                        activeClass="text-purple-light border-b "
+                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer hover:border-b uppercase"
                         >
                             Home
                         </Link>
@@ -47,8 +47,8 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
                         smooth={true}
                         duration={500}
                         offset={-50} 
-                        activeClass="text-red-500"
-                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
+                        activeClass="text-purple-light border-b"
+                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer hover:border-b uppercase"
                         >
                             About
                         </Link>
@@ -59,22 +59,22 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
                         smooth={true}
                         duration={500}
                         offset={-50} 
-                        activeClass="text-red-500"
-                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
+                        activeClass="text-purple-light border-b"
+                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer hover:border-b uppercase"
                         >
                             Projects
                         </Link>
 
                         <Link 
-                        to = "contact"
+                        to="projects"
                         spy={true}
                         smooth={true}
                         duration={500}
-                        offset={-50} 
-                        activeClass="text-red-500"
-                        className="text-gray-300 hover:text-white transition-colors hover:cursor-pointer"
+                        offset={-50}
+                        className="bg-purple-dark text-white py-1 px-4 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5
+                                        hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] cursor-pointer"
                         >
-                            Contact
+                            Download
                         </Link>
 
                     </div>

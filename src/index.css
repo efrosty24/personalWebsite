@@ -4,38 +4,11 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Space Grotesk', sans-serif;
-  background: #0a0a0a;
-  color: #f3f4f6;
+  background: #18181b;
+  color: #E2DFD2;
 }
 
-@layer utilities {
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
 
-  .animate-blink {
-    animation: blink 0.8s step-end infinite;
-  }
-
-  @keyframes loading {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(250%);
-    }
-  }
-
-  .animate-loading-bar {
-    animation: loading 0.8s ease infinite;
-  }
-}
 
 .reveal {
   opacity: 0;
@@ -59,4 +32,11 @@ html, body {
 }
 ::-webkit-scrollbar-track {
   background: #0a0a0a;
+}
+
+@theme {
+  --color-purple-dark: #6f59a9;
+  --color-purple-semidark: #806ac1;
+  --color-purple-light: #a39cdd;
+  --color-purple-soft: #bab9e8;
 }
